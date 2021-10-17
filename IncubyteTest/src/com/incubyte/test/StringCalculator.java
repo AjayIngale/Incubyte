@@ -2,7 +2,7 @@ package com.incubyte.test;
 
 public class StringCalculator {
 
-	public int calculate(String input) {
+	public int add(String input) {
 		String [] numbers =input.split(",");
           if(isEmpty(input))
           {

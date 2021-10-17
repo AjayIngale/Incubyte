@@ -8,17 +8,17 @@ class StringCalculatorTest {
 	@Test
 	public void empty_string_should_return_0()  {
 		StringCalculator calculator =new StringCalculator();
-		assertEquals(calculator.calculate(""), 0);
+		assertEquals(calculator.add(""), 0);
 	}
 	@Test
 	public void singlevalue_string_should_return_1()  {
 		StringCalculator calculator =new StringCalculator();
-		assertEquals(calculator.calculate("1"), 1);
+		assertEquals(calculator.add("1"), 1);
 	}
 	@Test
 	public void twovalue_string_should_return_sum()  {
 		StringCalculator calculator =new StringCalculator();
-		assertEquals(calculator.calculate("1,2"),3);
+		assertEquals(calculator.add("1,2"),3);
 	}
 	
 }
