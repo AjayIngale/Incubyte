@@ -10,6 +10,10 @@ class StringCalculatorTest {
 		StringCalculator calculator =new StringCalculator();
 		assertEquals(calculator.calculate(""), 0);
 	}
-
+	@Test
+	public void singlevalue_string_should_return_1()  {
+		StringCalculator calculator =new StringCalculator();
+		assertEquals(calculator.calculate("1"), 1);
+	}
 	
 }
