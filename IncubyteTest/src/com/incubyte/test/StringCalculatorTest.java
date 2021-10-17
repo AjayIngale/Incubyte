@@ -20,5 +20,10 @@ class StringCalculatorTest {
 		StringCalculator calculator =new StringCalculator();
 		assertEquals(calculator.add("1,2"),3);
 	}
+	@Test
+	public void threevalue_string_should_return_sum()  {
+		StringCalculator calculator =new StringCalculator();
+		assertEquals(calculator.add("1,2,3"),6);
+	}
 	
 }
