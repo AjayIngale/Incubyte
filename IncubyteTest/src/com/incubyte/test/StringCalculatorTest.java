@@ -25,5 +25,10 @@ class StringCalculatorTest {
 		StringCalculator calculator =new StringCalculator();
 		assertEquals(calculator.add("1,2,3"),6);
 	}
+	@Test
+	public void  newlinebetween_string_should_return_sum()  {
+		StringCalculator calculator =new StringCalculator();
+		assertEquals(calculator.add("1\n2,3"),6);
+	}
 	
 }

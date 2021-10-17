@@ -1,9 +1,9 @@
 package com.incubyte.test;
 
 public class StringCalculator {
-
+	
 	public int add(String input) {
-		String [] numbers =input.split(",");
+		String [] numbers =input.split("\n|,");
           if(isEmpty(input))
           {
         	  return 0;
