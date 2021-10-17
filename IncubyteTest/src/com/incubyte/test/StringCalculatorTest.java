@@ -30,5 +30,10 @@ class StringCalculatorTest {
 		StringCalculator calculator =new StringCalculator();
 		assertEquals(calculator.add("1\n2,3"),6);
 	}
+	@Test
+	public  void whenDelimiterIsSpecifiedThenItIsUsedToSeparateNumbers() {
+		StringCalculator calculator =new StringCalculator();
+	   assertEquals(calculator.add("//;\n1;2"),3);
+	}
 	
 }
