@@ -15,5 +15,10 @@ class StringCalculatorTest {
 		StringCalculator calculator =new StringCalculator();
 		assertEquals(calculator.calculate("1"), 1);
 	}
+	@Test
+	public void twovalue_string_should_return_sum()  {
+		StringCalculator calculator =new StringCalculator();
+		assertEquals(calculator.calculate("1,2"),3);
+	}
 	
 }
