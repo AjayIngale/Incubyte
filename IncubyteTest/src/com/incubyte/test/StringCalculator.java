@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StringCalculator {
-	
+	static int addCount=0;
 	private String delimiter="\n|,|;";
 	public int add(String input) throws Exception {
+		    addCount++;
+	
 		String [] numbers =input.split(delimiter);
           if(isEmpty(input))
           {
@@ -29,12 +31,19 @@ public class StringCalculator {
         	    }
         	    return getSum(newnumbers); 
           }
+          if(input.length()>1)
+          {
+        	  return getSumlessthan1000(numbers);
+          }
          
            
           
           else {
         	  return getSum(numbers);
+        	
           }
+          
+        
           
           
 	
@@ -64,6 +73,8 @@ public class StringCalculator {
 		 {
 			 throw new Exception("Negatives Not Allowed");
 		 } 
+		  
+		
 		 
 		int sum=0;
 		for(String current :numbers) {
@@ -73,6 +84,23 @@ public class StringCalculator {
             
 		return sum;			
 	}
+private int getSumlessthan1000 (String[] numbers)
+{
+	 int sum = 0;
+		for(String current :numbers) {
+			if(StringToInt(current)>1000) {
+				  continue;
+			}
+				  else {
+					  sum+=Integer.parseInt(current);	
+				  }
+				
+					 
+				   
+			 }
+		return sum;
+	
+}
 
 	private boolean isEmpty(String input) {
 		 return input.isEmpty();
@@ -82,6 +110,12 @@ public class StringCalculator {
 		
 		return Integer.parseInt(input);
 	
+	}
+
+	public int   getCount() {
+		return addCount;
+	
+		
 	}
 	
 	

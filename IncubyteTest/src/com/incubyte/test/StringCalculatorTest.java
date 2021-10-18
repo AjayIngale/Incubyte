@@ -59,6 +59,16 @@ class StringCalculatorTest {
 		
 		}
 	}
-	
+	@Test
+	public void getAddCount()
+	{
+		StringCalculator calculator =new StringCalculator();
+	     System.out.println("add Method Calls:"+calculator.getCount());
+	}
+	@Test
+	public final void  number_biggerthan_1000_should_be_ignored() throws Exception {
+		StringCalculator calculator =new StringCalculator();
+	    assertEquals( calculator.add("2,1001"),2);
+	}
 	
 }
